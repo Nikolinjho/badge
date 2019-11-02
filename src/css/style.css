@@ -171,3 +171,51 @@
     color: white;
     background: #46CD80;
 }
+
+
+/* print instance styles */
+
+.print-caracass{
+    padding: 47px 37px 0 35px;
+    font: 14px "Roboto", sans-serif;
+}
+
+.print-carcass__header{
+    max-width: 345px;
+}
+
+.print-carcass__header h1{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.print-carcass__header_rule{
+    margin-top: 21px;
+    font-size: 13px;
+}
+
+.result-preview{
+    margin-top: 37px;
+}
+
+.result_badge-item{
+    width: 212.99px
+}
+
+.result-preview__item{
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.result-preview__item::after{
+    content: "";
+    height: 2px;
+    opacity: .5;
+    display: block;
+    width: 301px;
+    background: url(../img/Line.svg);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
