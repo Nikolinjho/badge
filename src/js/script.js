@@ -102,6 +102,13 @@ $(document).ready(function(){
         $(".result_brand-logo").css("background-image", "url(./img/brands/" + brand + ".svg)")
     })
 
+
+    $(".print").click(function(){
+        // $(".badge-carcass").hide();
+        window.print(); 
+    })
+
+
     function enableBtn(){                   // отключить кнопки
         if ( $(".print-name").val() !== "" && $(".post-changer").children("option:selected").val() !== "Выберите из списка" ){
             $(".download, .print").attr("disabled", false). css("opacity", "1");
@@ -109,4 +116,5 @@ $(document).ready(function(){
         else
         $(".download, .print").attr("disabled", true). css("opacity", ".5");
     }
+
 })

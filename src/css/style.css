@@ -8,8 +8,16 @@
 }
 
 
-*{
-    box-sizing: border-box;
+* , *:before, *:after{ 
+    box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
+    -ms-box-sizing:border-box;
+  }
+
+html, body{
+    width: 100%;
+    height: 100%;
 }
 
 .badge-carcass{
@@ -88,9 +96,6 @@
 .active-up{
     background: url("../img/Vector-up.svg") no-repeat 95% 5px;
 }
-
-
-
 
 .creation_post{
     margin-top: 37px;
@@ -175,47 +180,85 @@
 
 /* print instance styles */
 
-.print-caracass{
-    padding: 47px 37px 0 35px;
+.print-carcass{
+    /* padding: 47px 0 43px 35px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     font: 14px "Roboto", sans-serif;
 }
 
-.print-carcass__header{
-    max-width: 345px;
+.print-carcass__overview{
+    padding: 47px 0 0 35px;
 }
 
 .print-carcass__header h1{
-    font-weight: 600;
     font-size: 24px;
+    font-weight: 600;
 }
 
 .print-carcass__header_rule{
-    margin-top: 21px;
     font-size: 13px;
+    margin-top: 21px;
+    max-width: 345px;
 }
 
-.result-preview{
-    margin-top: 37px;
+.print-preview{
+    margin: 37px 0 38px 0 ;
 }
 
-.result_badge-item{
-    width: 212.99px
-}
-
-.result-preview__item{
+.print-preview__item{
     margin-bottom: 18px;
-    position: relative;
 }
 
-.result-preview__item::after{
-    content: "";
-    height: 2px;
-    opacity: .5;
-    display: block;
-    width: 301px;
-    background: url(../img/Line.svg);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+
+.print-carcass__footer{
+    flex-grow: 1;
+    background: #F2F2F2;
+    padding: 33px 0 42px 35px;
 }
+
+.print-carcass__footer_loss h1{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.print-carcass__footer_loss-guide{
+    margin-top: 10px;
+    font-size: 13px;
+    max-width: 523px;
+} 
+
+.print-carcass__footer_cheat{
+    margin-top: 32px;
+}
+
+.print-carcass__footer_cheat h1{
+    font-size: 18px;
+    font-weight: 600;;
+}
+
+.print-carcass__footer_cheat-guide{
+    margin-top: 10px;
+    font-size: 13px;
+    max-width: 513px;
+}
+
+.print-carcass__footer_cheat span{
+    display: inline-block;
+    margin-top: 42px;
+}
+
+
+@media print { /* Стиль для печати */
+    body{
+      visibility: hidden;
+    }
+    .badge-carcass{
+        display: none;
+    }
+    /* Блок который нужно отобразить */
+    .print-carcass {
+      visibility: visible;
+     }
+     }
