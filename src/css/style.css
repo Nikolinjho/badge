@@ -186,6 +186,7 @@ html, body{
     display: flex;
     flex-direction: column;
     font: 14px "Roboto", sans-serif;
+    display: none;
 }
 
 .print-carcass__overview{
@@ -251,14 +252,15 @@ html, body{
 
 
 @media print { /* Стиль для печати */
-    body{
+    /* body{
       visibility: hidden;
-    }
+    } */
     .badge-carcass{
         display: none;
     }
     /* Блок который нужно отобразить */
     .print-carcass {
-      visibility: visible;
+        display: flex;
+        visibility: visible;
      }
      }
