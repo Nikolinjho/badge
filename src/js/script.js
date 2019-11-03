@@ -99,12 +99,11 @@ $(document).ready(function(){
             default:
                 break;
         }
-        $(".result_brand-logo").css("background-image", "url(./img/brands/" + brand + ".svg)")
+        $(".result_brand-logo").css("background-image", `url(./img/brands/${brand}.svg)`)
     })
 
 
     $(".print").click(function(){
-        // $(".badge-carcass").hide();
         window.print(); 
     })
 
