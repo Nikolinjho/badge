@@ -62,7 +62,6 @@ $(document).ready(function(){
     })
 
     $(".brand-changer").on("change", function(){     // choose brand
-        $(this).children()
         let brand = $(this).children("option:selected").val();
         switch (brand) {
                 case "Dyson":
@@ -153,14 +152,28 @@ $(document).ready(function(){
 
     })
 
+    
+    // function toEnableKeyCombine(combine){
+    //     $(document).on('keydown', function(e) {
+    //         if ()
+    //         if(e.ctrlKey && (e.key == "p" || e.charCode == 16 || e.charCode == 112 || e.keyCode == 80) ){
+    //             alert("Please use the Print PDF button below for a better rendering on the document");
+    //             e.cancelBubble = true;
+    //             e.preventDefault();
+    //             e.stopImmediatePropagation();
+    //         }  
+    //     });
+    // }
 
 
     $(document).on('keydown', function(e) {
         if(e.ctrlKey && (e.key == "p" || e.charCode == 16 || e.charCode == 112 || e.keyCode == 80) ){
             if (combine){
-                window.print();
+                console.log(1)
+                // window.print();
             }
             else{
+                console.log(2)
                 alert("Пожалуйста, заполните необходимые поля!");
                 e.preventDefault();
                 e.cancelBubble = true;
@@ -169,8 +182,9 @@ $(document).ready(function(){
         }  
     });
 
+
     $(".print").click(function(){           //print page
-        window.print();       
+        window.print();                    
     })
 
 

@@ -10,6 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-minify-css": "^1.2.4"
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "gulp-download": "0.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1"
   }
 }
